@@ -12,7 +12,6 @@ def Dash():
     click.echo('2.Register New Account')
     selection = click.prompt('Enter:')
     click.echo('3.Exit')
-
     if selection == 'Login':
         click.echo('1.Login')
         click.echo('********Welcome to BookMyShow********')
@@ -114,6 +113,8 @@ def Dash():
                     df = pd.read_csv('C:\\Users\\visrilakshmi\\Desktop\\BN.csv')
                     df = pd.DataFrame(df)
                     print(df)
+                if data == '4':
+                    Dash()
                 click.echo('1.Book Tickets')
                 click.echo('2.Cancel Tickets')
                 click.echo('3.Give User Rating')
@@ -163,6 +164,9 @@ def Dash():
                 click.prompt('Email:')
                 click.prompt('Phone:')
                 click.prompt('Age:')
+    if selection == 'Exit':
+        quit()
+
 
 
 
